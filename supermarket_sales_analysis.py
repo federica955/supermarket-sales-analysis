@@ -1,4 +1,3 @@
-
 # supermarket_sales_analysis.py
 # Project: Supermarket Sales Analysis
 # Author: Federica
@@ -13,7 +12,7 @@ data = pd.read_csv("supermarket_sales - Sheet1.csv")
 # Create a new column 'Total' to calculate total sales per transaction
 data["Total"] = data["Unit price"] * data["Quantity"]
 
-# === ANALYSIS 1: Total Sales per Product Category ===
+# ANALYSIS 1: Total Sales per Product Category ===
 sales_by_product = data.groupby("Product line")["Total"].sum().sort_values(ascending=False)
 
 # Plot sales by product category
@@ -23,7 +22,7 @@ plt.ylabel("Totale vendite")
 plt.tight_layout()
 plt.show()
 
-# === ANALYSIS 2: Total Sales per City ===
+# ANALYSIS 2: Total Sales per City ===
 sales_by_city = data.groupby("City")["Total"].sum().sort_values(ascending=False)
 
 # Plot sales by city
@@ -33,7 +32,7 @@ plt.ylabel("Totale vendite")
 plt.tight_layout()
 plt.show()
 
-# === ANALYSIS 3: Total Sales per Day of the Week ===
+#  ANALYSIS 3: Total Sales per Day of the Week ===
 # Convert 'Date' column to datetime
 data["Date"] = pd.to_datetime(data["Date"])
 # Extract day of the week
@@ -51,7 +50,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-# === ANALYSIS 4: Payment Method Distribution ===
+#  ANALYSIS 4: Payment Method Distribution ===
 payment_counts = data["Payment"].value_counts()
 
 # Plot payment method as pie chart
