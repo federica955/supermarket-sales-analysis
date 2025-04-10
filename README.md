@@ -38,16 +38,7 @@ Ho usato:
 - *Pandas* per lavorare con i dati
 - *Matplotlib* per visualizzare i risultati
 
----
 
-## Key Insights / Risultati
-
-- La categoria *Sports and Travel* è risultata la più redditizia  
-- La città con più vendite è stata *[inserisci città]*  
-- I giorni con più vendite sono *[inserisci giorno/i]*  
-- Il metodo di pagamento più usato è *[inserisci metodo]*
-
----
 
 ## How to run
 
